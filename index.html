@@ -1687,167 +1687,11 @@
   </footer>
 
   <script>
-  const translations = {
-    en: {
-      // Nav
-      'nav.summary': 'Summary',
-      'nav.contents': 'Contents',
-      'nav.lessons': 'Key Lessons',
-      'nav.masterclass': 'Masterclass',
-      'nav.author': 'Author',
-      'nav.partner': 'Become a Partner',
+  // English is scraped from the HTML on load — the HTML is the single source of truth.
+  // Only Japanese translations need to be maintained here.
+  var englishOriginals = {};
 
-      // Hero
-      'hero.title': 'The Pitch Deck Framework That Gets Japanese Startups <em>Funded Globally</em>',
-      'hero.featured': 'As featured at',
-      'hero.subtitle': 'The proven framework used by 600+ startups to pitch and win on the global stage. Built for Japanese founders going global.',
-      'hero.launch': 'This guide launches with its first Lead Partner. Partnership is what brings it to market.',
-      'hero.cta': 'Download Free eBook',
-      'hero.badge': 'Launching Soon / ローンチ準備中',
-      'hero.bookLabel': 'Japan Edition',
-      'hero.bookTitle': 'The Ultimate Pitch Deck Guide',
-      'hero.presentedBy': 'Presented by',
-      'hero.yourLogo': 'YOUR LOGO HERE',
-      'hero.bookEdition': '87 Pages &bull; 6 Chapters',
-      'hero.stat1': 'Startups coached globally',
-      'hero.stat2num': '$2.5M+',
-      'hero.stat2': 'Raised by coached startups with global VCs',
-      'hero.stat3': 'Years coaching startups globally',
-
-      // Sponsors
-      'sponsors.label': 'Supporting Partners',
-      'sponsors.title': 'Join the partner network',
-      'sponsors.logo': 'Your Logo Here',
-      'sponsors.cta': 'Become a Partner &rarr;',
-
-      // Executive Summary
-      'summary.label': 'Executive Summary',
-      'summary.title': 'What&rsquo;s <span class="accent">inside</span> the guide',
-      'summary.callout': 'Built for bold Japanese startups ready to turn short pitch sessions into real global deals. Backed by insights from hundreds of pitch trainings across Asia, the US, and Europe &mdash; a <strong>proven, step-by-step framework</strong> to master your most powerful growth tool: your pitch.',
-      'summary.sp1Title': 'No Fluff, All Substance',
-      'summary.sp1Desc': '87 pages covering 5 critical areas: common mistakes, global mindset, deck structure, presentation skills, and practical pitch advice.',
-      'summary.sp2Title': 'The Real Problem',
-      'summary.sp2Desc': 'Translating domestic pitch decks doesn&rsquo;t work globally. This guide teaches you to think and pitch like a global founder from day one.',
-      'summary.sp3Title': 'Common Mistakes Decoded',
-      'summary.sp3Desc': '4 traps that kill international pitches: bragging credentials, over-emphasizing patents, verbose problems, and cramming slides.',
-      'summary.sp4Title': 'Beyond the Slides',
-      'summary.sp4Desc': 'Storytelling mastery, Q&amp;A strategy, speaker selection, and the &ldquo;multiverse&rdquo; approach to pitch prep for any situation.',
-
-      // Contents
-      'contents.label': "What's Inside",
-      'contents.title': '6 chapters. One <span class="accent">complete</span> framework.',
-      'contents.subtitle': 'Every chapter distilled from 12+ years of coaching startups to pitch and win globally.',
-      'contents.ch1Title': 'Why Most Startups Fail at Global Pitching',
-      'contents.ch1Desc': 'Common mistakes: vague messaging, jargon overload, weak storytelling, no clear call-to-action. Learn what kills pitches before they even start.',
-      'contents.ch2Title': 'The Mindset of the Global Pitch',
-      'contents.ch2Desc': 'Elevator pitch mastery, empathizing with your audience, and managing stakeholder interests &mdash; from CEOs to VCs to end-users.',
-      'contents.ch3Title': 'Anatomy of the Perfect Pitch Deck',
-      'contents.ch3Desc': 'The complete 10-slide framework: intro, problem, value proposition, solution, business model, competition, team, global strategy, CTA, and conclusion &mdash; with real examples.',
-      'contents.ch4Title': 'Mastering the Q&amp;A',
-      'contents.ch4Desc': 'Turn Q&A into your strongest moment. Prepare backup slides, master the right expressions, and avoid the phrases that kill credibility.',
-      'contents.ch5Title': 'The Power of Storytelling',
-      'contents.ch5Desc': 'The 3 essential elements: Why, Struggle, and Happy Ending. Practice with movies, learn from great speakers, and bring your pitch to life.',
-      'contents.ch6Title': 'Final Rules for Success',
-      'contents.ch6Desc': 'Multiverse pitch prep (5-second, 30-second &amp; 5-minute versions), "wow" moments, choosing the right speaker, and 6 essential rules for success.',
-
-      // Quote
-      'quote.text': '&ldquo;If you can&rsquo;t pitch it in 30 seconds, you can&rsquo;t pitch it in 30 minutes.&rdquo;<br>The difference between a good startup and a <em>funded</em> startup is the pitch.',
-      'quote.cite': '&mdash; Sofian Meguellati, Pitch Coach',
-
-      // Key Lessons
-      'lessons.label': 'Key Lessons',
-      'lessons.title': '8 lessons that <span class="accent">change</span> how you pitch',
-      'lessons.l1Title': 'Clarity Beats Complexity',
-      'lessons.l1Desc': 'If you can&rsquo;t explain your solution in plain language, investors assume you don&rsquo;t fully understand it yourself. Kill the jargon.',
-      'lessons.l2Title': 'Pitching Is a Performance',
-      'lessons.l2Desc': 'It&rsquo;s not a report or a presentation &mdash; it&rsquo;s a show. Use voice, body language, and emotional rhythm to connect with your audience.',
-      'lessons.l3Title': 'The 10-Slide Framework',
-      'lessons.l3Desc': 'Intro, Problem, Value Proposition, Solution, Business Model, Competition, Team, Global Strategy, CTA, and Conclusion &mdash; in that order.',
-      'lessons.l4Title': 'Q&amp;A Is Your Secret Weapon',
-      'lessons.l4Desc': 'Prepare 5&ndash;10 tough questions in advance. If handled well, Q&amp;A can elevate your entire pitch and build deep credibility.',
-      'lessons.l5Title': 'Storytelling Wins Deals',
-      'lessons.l5Desc': 'The 3 essential elements: Why you started, the Struggle you faced, and the Happy Ending you&rsquo;re building. Emotion creates memory.',
-      'lessons.l6Title': 'The Multiverse Approach',
-      'lessons.l6Desc': 'Prepare 3 versions: 5-second hook, 30-second teaser, and 5-minute full story. Start short, earn the longer conversation.',
-      'lessons.l7Title': 'One Voice, One Message',
-      'lessons.l7Desc': 'Pick strategy over fairness. One confident, globally experienced speaker is stronger than three nervous ones splitting slides.',
-      'lessons.l8Title': 'Insert a &ldquo;Wow&rdquo; Moment',
-      'lessons.l8Desc': 'A surprising stat, bold claim, or emotional story in the first 30 seconds breaks the pattern and locks in attention.',
-
-      // Audience
-      'audience.label': 'Who Is This For',
-      'audience.title': "Built for Japan's most <span class=\"accent\">ambitious</span> founders",
-      'audience.a1Title': 'Corporate Innovation Labs',
-      'audience.a1Desc': 'Intrapreneurs and innovation teams inside large Japanese corporates preparing to pitch new ventures to global partners.',
-      'audience.a2Title': 'University Spin-outs',
-      'audience.a2Desc': 'Researchers and academic founders turning deep-tech IP into investor-ready startups with global ambitions.',
-      'audience.a3Title': 'METI &amp; JETRO Participants',
-      'audience.a3Desc': 'Founders in government-backed international programs who need to pitch confidently at overseas demo days and trade events.',
-      'audience.a4Title': 'First-Time Global Founders',
-      'audience.a4Desc': 'Japanese founders pitching to international investors for the first time &mdash; no prior global fundraising experience required.',
-
-      // Track Record
-      'track.label': 'Proven Track Record',
-      'track.title': 'Trusted by leading institutions across Asia',
-      'track.locations': 'Japan sessions launching 2026 &mdash; Tokyo &middot; Osaka &middot; Fukuoka &middot; further locations announced at launch',
-
-      // Masterclass
-      'mc.label': 'Distribution Strategy',
-      'mc.title': "Every session puts the guide directly into founders' hands",
-      'mc.featured': 'As featured at',
-      'mc.subtitle': 'The masterclass is the distribution engine',
-      'mc.desc': "Each of the 10 sessions is a live pitch masterclass &mdash; and a direct ebook distribution moment. Every founder who attends leaves with the guide. The masterclass isn't a separate product. It's how we guarantee the guide reaches 300&ndash;500 founders in person, across Japan.",
-      'mc.f1': '10 masterclass sessions &times; 30&ndash;50 founders per session = 300&ndash;500 founders reached directly',
-      'mc.f2': 'Every attendee receives the ebook immediately at the session &mdash; no friction, no follow-up required',
-      'mc.f3': 'Partner logo displayed at every session and on every distributed copy',
-      'mc.f4': 'Locations span Tokyo and major startup hubs across Japan',
-      'mc.f5': 'Same proven format as the Google for Startups Tokyo session',
-      'mc.quote': '&ldquo;Every ebook distributed carries your logo. Every session opens with your introduction. This is not event sponsorship &mdash; it&rsquo;s a content distribution partnership anchored by a live masterclass.&rdquo;',
-
-      // Author
-      'author.label': 'About the Author',
-      'author.title': 'The coach <span class="accent">behind the framework</span>',
-      'author.linkedin': 'Connect on LinkedIn',
-      'author.role': 'International Pitch Coach &bull; Paris &bull; Singapore &bull; Seoul &bull; Tokyo',
-      'author.bio1': 'Featured at Google for Startups Tokyo and with over 12 years bridging the gap between Asian startups and global investors, Sofian Meguellati has coached more than 600 startups on crafting pitches that win funding &mdash; helping teams raise over $2.5M with global VCs. Based across Paris, Singapore, Seoul, and Tokyo.',
-      'author.bio2': 'He has led 11 international programs with Korean government agencies, spoken at major events across Asia, and appeared on TBS broadcast. His frameworks are now available for the Japanese startup ecosystem, bringing battle-tested pitch strategies to a new generation of founders going global.',
-
-      // Sponsor CTA
-      'sponsor.label': '協賛パートナー募集 / Become a Partner',
-      'sponsor.title': 'Give your founders the global edge &mdash; and the credit for it',
-      'sponsor.subtitle': 'The organizations that support Japanese startup innovation aren&rsquo;t just writing checks. They&rsquo;re the reason founders succeed on the global stage. Here&rsquo;s how to be that organization.',
-      'sponsor.credibility': 'Every founder who engages with this guide and a masterclass session will know your organization made it possible. That&rsquo;s not a logo placement. That&rsquo;s a credibility transfer.',
-      'sponsor.launch': 'This guide doesn&rsquo;t launch until a Lead Partner is confirmed. Your organization is the reason 300&ndash;500 Japanese founders get access to this methodology &mdash; and your name is on it from day one.',
-      'sponsor.leadTitle': 'Lead Partner <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted);">/ 主要パートナー</span>',
-      'sponsor.leadTag': '&ldquo;Presented by [Your Organization]&rdquo; &mdash; exclusive, one partner only',
-      'sponsor.leadDesc': 'Your organization becomes the face of Japan&rsquo;s global pitch framework. Every founder who opens this guide sees your name first. Every masterclass session opens with your introduction. You don&rsquo;t just support the ecosystem &mdash; you lead it.',
-      'sponsor.lf1': '&ldquo;Presented by [Your Organization]&rdquo; on the ebook cover and landing page hero',
-      'sponsor.lf2': 'Opening mention and logo display at all 10 masterclass sessions across Japan',
-      'sponsor.lf3': 'Direct access to 300&ndash;500 startup founders across 10 live sessions',
-      'sponsor.lf4': 'Co-branded marketing materials for all event communications',
-      'sponsor.lf5': 'Your organization featured in every ebook download &mdash; estimated 1,000+ founders reached',
-      'sponsor.lf6': 'Priority access to session data and founder engagement summaries',
-      'sponsor.leadExcl': '1 organization only &mdash; exclusive lead partnership',
-      'sponsor.suppTitle': 'Supporting Partner',
-      'sponsor.suppTag': 'Join the partner network behind Japan&rsquo;s next global founders',
-      'sponsor.suppDesc': 'Your organization&rsquo;s name sits alongside Japan&rsquo;s leading startup support institutions &mdash; a visible signal that you invest in founder success beyond borders.',
-      'sponsor.sf1': 'Logo in the Supporting Partners section of the landing page',
-      'sponsor.sf2': 'Acknowledgment inside the ebook &mdash; seen by every download',
-      'sponsor.sf3': 'Mention at all 10 masterclass sessions across Japan',
-      'sponsor.sf4': 'Association with a methodology trusted by 600+ startups across Asia',
-      'sponsor.sf5': 'Access to post-event session summaries',
-      'sponsor.suppLimit': 'Limited to 5 Supporting Partners per year',
-      'sponsor.ctaTitle': 'Ready to be the organization that equips Japanese founders for the global stage?',
-      'sponsor.ctaSub': '日本のスタートアップの海外展開を支援するパートナーとして、ともに歩みませんか。',
-      'sponsor.ctaLead': 'Inquire about Lead Partnership &rarr;',
-      'sponsor.ctaSupp': 'Inquire about Supporting Partnership &rarr;',
-
-      // Footer
-      'footer.brand': 'Global Pitch <span>Deck</span> Guide &mdash; Japan Edition',
-      'footer.copy': '&copy; 2026 &bull; All rights reserved &bull; Made in Tokyo / 東京発'
-    },
-
-    ja: {
+  var jaTranslations = {
       // Nav
       'nav.summary': '概要',
       'nav.contents': '目次',
@@ -2004,13 +1848,18 @@
       // Footer
       'footer.brand': 'グローバル ピッチ <span>デック</span> ガイド &mdash; Japan Edition',
       'footer.copy': '&copy; 2026 &bull; All rights reserved &bull; 東京発'
-    }
   };
 
+  // On load: scrape all English originals from the HTML (single source of truth)
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    englishOriginals[el.getAttribute('data-i18n')] = el.innerHTML;
+  });
+
   function setLang(lang) {
+    var source = (lang === 'ja') ? jaTranslations : englishOriginals;
     document.querySelectorAll('[data-i18n]').forEach(function(el) {
       var key = el.getAttribute('data-i18n');
-      var text = translations[lang][key];
+      var text = source[key];
       if (text) el.innerHTML = text;
     });
     document.documentElement.lang = lang;
