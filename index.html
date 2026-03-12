@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Ultimate Pitch Deck Guide for Japanese Startups Going Global</title>
   <meta name="description" content="Free guide helping Japanese startups craft world-class pitch decks for international investors and partners.">
+  <meta property="og:title" content="Global Pitch Deck Guide — Japan Edition">
+  <meta property="og:description" content="The proven framework used by 600+ startups to pitch and win on the global stage. Built for Japanese founders going global.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="ebook cover 2d.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Global Pitch Deck Guide — Japan Edition">
+  <meta name="twitter:description" content="The proven framework used by 600+ startups to pitch and win on the global stage. Built for Japanese founders going global.">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -93,7 +101,7 @@
       background: var(--teal);
       padding: 5px 14px;
       border-radius: 4px;
-      box-shadow: 0 0 14px rgba(0,180,160,0.35);
+      box-shadow: 0 0 14px rgba(0,180,160,0.2);
       margin-bottom: 16px;
     }
     .section-title {
@@ -161,53 +169,6 @@
       height: 6px;
       background: var(--teal);
       border-radius: 50%;
-    }
-
-    /* Title Sponsor Box */
-    .sponsor-hero-box {
-      display: inline-block;
-      border: 2px solid var(--teal);
-      border-radius: var(--radius);
-      padding: 20px 48px;
-      margin-bottom: 40px;
-      position: relative;
-      background: rgba(0,180,160,0.04);
-      cursor: pointer;
-      transition: all 0.3s;
-      box-shadow: 0 0 20px rgba(0,180,160,0.12);
-    }
-    .sponsor-hero-box:hover {
-      background: rgba(0,180,160,0.08);
-      border-color: var(--teal-light);
-      transform: translateY(-2px);
-      box-shadow: 0 0 30px rgba(0,180,160,0.2);
-    }
-    .sponsor-hero-box .label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--teal-dark);
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .sponsor-hero-box .placeholder {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--text-muted);
-      letter-spacing: 2px;
-    }
-    .sponsor-hero-box .badge {
-      position: absolute;
-      top: -12px;
-      right: -12px;
-      background: var(--teal);
-      color: #fff;
-      font-size: 0.65rem;
-      font-weight: 800;
-      padding: 4px 10px;
-      border-radius: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     .hero h1 {
@@ -862,6 +823,28 @@
       margin-bottom: 4px;
       color: var(--text);
     }
+    .linkedin-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(10,102,194,0.5);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-top: 8px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .linkedin-btn:hover {
+      background: #0A66C2;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 14px rgba(10,102,194,0.4);
+    }
+    .linkedin-btn:active {
+      transform: translateY(0) scale(1);
+    }
     .author-info .author-role {
       color: var(--teal);
       font-size: 0.95rem;
@@ -936,7 +919,7 @@
       background: linear-gradient(135deg, rgba(0,180,160,0.04), transparent);
     }
     .tier-card.featured::before {
-      content: 'RECOMMENDED';
+      content: 'EXCLUSIVE \2014  1 SLOT';
       position: absolute;
       top: -12px;
       left: 24px;
@@ -979,11 +962,15 @@
       position: relative;
     }
     .tier-features li::before {
-      content: '~';
+      content: '';
       position: absolute;
       left: 0;
-      color: var(--teal);
-      font-weight: 700;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300B4A0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
     }
 
     /* --- HIGHLIGHT STRIP --- */
@@ -1178,7 +1165,7 @@
         <li><a href="#lessons">Key Lessons</a></li>
         <li><a href="#masterclass">Masterclass</a></li>
         <li><a href="#author">Author</a></li>
-        <li><a href="#sponsor" style="color: var(--teal); font-weight: 700;">Become a Sponsor</a></li>
+        <li><a href="#sponsor" style="color: var(--teal); font-weight: 700;">Become a Partner</a></li>
       </ul>
       <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
     </div>
@@ -1186,18 +1173,18 @@
 
   <!-- HERO -->
   <section class="hero">
-    <!-- Title Sponsor Spot -->
-    <a href="#sponsor" class="sponsor-hero-box" style="text-decoration:none;">
-      <div class="badge">Title Sponsor</div>
-      <div class="label">Presented by</div>
-      <div class="placeholder">YOUR LOGO HERE</div>
-    </a>
-
     <div class="hero-content container">
       <div class="hero-text">
-        <h1>Win Global Investors with a Pitch Deck That <em>Actually Works</em></h1>
+        <h1>The Pitch Deck Framework That Gets Japanese Startups <em>Funded Globally</em></h1>
+        <div style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 6px 12px; margin: 12px 0 8px; box-shadow: var(--shadow-sm);">
+          <span style="font-size: 0.72rem; color: var(--text-muted);">As featured at</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-secondary);">Google for Startups Tokyo</span>
+        </div>
         <p class="jp-hero">グローバル投資家を動かすピッチデックの作り方</p>
-        <p class="subtitle">The proven framework used by 600+ startups to close deals with international VCs and partners. Built for Japanese founders going global.</p>
+        <p class="subtitle">The proven framework used by 600+ startups to pitch and win on the global stage. Built for Japanese founders going global.</p>
+
+        <p style="color: var(--teal); font-weight: 600; font-size: 0.95rem; margin-top: 16px; margin-bottom: 16px;">This guide launches with its first Lead Partner. Partnership is what brings it to market.</p>
 
         <div style="position: relative; display: inline-block;">
           <button class="btn btn-disabled" disabled>
@@ -1206,6 +1193,8 @@
           </button>
           <span class="btn-badge">Launching Soon / ローンチ準備中</span>
         </div>
+
+        <!-- Lead Partner Spot moved to book cover -->
       </div>
 
       <div class="book-wrapper">
@@ -1213,6 +1202,10 @@
           <div class="book-cover">
             <span class="book-label">Japan Edition</span>
             <span class="book-title">The Ultimate Pitch Deck Guide</span>
+            <div style="margin: 16px 0 8px; padding: 8px 12px; border: 1px solid rgba(0,180,160,0.4); border-radius: 6px; background: rgba(0,180,160,0.08); text-align: center;">
+              <span style="display: block; font-size: 0.45rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); margin-bottom: 2px;">Presented by</span>
+              <span style="display: block; font-size: 0.65rem; font-weight: 700; color: rgba(255,255,255,0.7); letter-spacing: 1px;">YOUR LOGO HERE</span>
+            </div>
             <span class="book-edition">87 Pages &bull; 6 Chapters</span>
           </div>
           <div class="book-spine"></div>
@@ -1228,11 +1221,11 @@
       </div>
       <div class="stat">
         <div class="stat-number">$2.5M+</div>
-        <div class="stat-label">Raised with global VCs in 12 months</div>
+        <div class="stat-label">Raised by coached startups with global VCs</div>
       </div>
       <div class="stat">
-        <div class="stat-number">10</div>
-        <div class="stat-label">Masterclass sessions across Japan</div>
+        <div class="stat-number">12+</div>
+        <div class="stat-label">Years coaching startups globally</div>
       </div>
     </div>
   </section>
@@ -1241,27 +1234,28 @@
   <section class="sponsors-section">
     <div class="container" style="text-align: center;">
       <p class="section-label">Supporting Partners</p>
-      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">協賛パートナー</h2>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Join the partner network</h2>
+      <p class="jp-text" style="text-align:center;">協賛パートナー</p>
       <div class="sponsor-row">
         <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
           <span>Your Logo Here</span>
-          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+          <span class="sponsor-cta">Become a Partner &rarr;</span>
         </a>
         <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
           <span>Your Logo Here</span>
-          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+          <span class="sponsor-cta">Become a Partner &rarr;</span>
         </a>
         <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
           <span>Your Logo Here</span>
-          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+          <span class="sponsor-cta">Become a Partner &rarr;</span>
         </a>
         <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
           <span>Your Logo Here</span>
-          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+          <span class="sponsor-cta">Become a Partner &rarr;</span>
         </a>
         <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
           <span>Your Logo Here</span>
-          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+          <span class="sponsor-cta">Become a Partner &rarr;</span>
         </a>
       </div>
     </div>
@@ -1271,7 +1265,7 @@
   <section id="summary">
     <div class="container">
       <p class="section-label">Executive Summary</p>
-      <h2 class="section-title">What this guide will <span class="accent">teach you</span></h2>
+      <h2 class="section-title">What&rsquo;s <span class="accent">inside</span> the guide</h2>
       <p class="jp-text" style="margin-bottom: 0;">このガイドで学べること</p>
 
       <div class="callout">
@@ -1296,7 +1290,7 @@
         </div>
         <div class="selling-point-card">
           <span class="sp-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
-          <h4>Beyond the Deck</h4>
+          <h4>Beyond the Slides</h4>
           <p>Storytelling mastery, Q&amp;A strategy, speaker selection, and the &ldquo;multiverse&rdquo; approach to pitch prep for any situation.</p>
         </div>
       </div>
@@ -1307,8 +1301,8 @@
   <section id="contents" style="background: var(--bg-alt);">
     <div class="container">
       <p class="section-label">What's Inside</p>
-      <h2 class="section-title">6 chapters of <span class="accent">battle-tested</span> frameworks</h2>
-      <p class="section-subtitle">Every chapter distilled from 12+ years of coaching startups to pitch on the global stage.</p>
+      <h2 class="section-title">6 chapters. One <span class="accent">complete</span> framework.</h2>
+      <p class="section-subtitle">Every chapter distilled from 12+ years of coaching startups to pitch and win globally.</p>
 
       <div class="chapters-grid">
         <div class="chapter-card">
@@ -1335,7 +1329,7 @@
         <div class="chapter-card">
           <div class="card-num-big">04</div>
           <div class="chapter-number">04</div>
-          <h3>Q&A: A Strategic Tool</h3>
+          <h3>Mastering the Q&amp;A</h3>
           <p class="jp-text">Q&Aセッション戦略</p>
           <p>Turn Q&A into your strongest moment. Prepare backup slides, master the right expressions, and avoid the phrases that kill credibility.</p>
         </div>
@@ -1349,7 +1343,7 @@
         <div class="chapter-card">
           <div class="card-num-big">06</div>
           <div class="chapter-number">06</div>
-          <h3>Final Advice to Excel</h3>
+          <h3>Final Rules for Success</h3>
           <p class="jp-text">成功のためのアドバイス</p>
           <p>Multiverse pitch prep (5-second, 30-second &amp; 5-minute versions), "wow" moments, choosing the right speaker, and 6 essential rules for success.</p>
         </div>
@@ -1361,7 +1355,7 @@
   <div class="highlight-strip">
     <div class="strip-content">
       <blockquote>&ldquo;If you can&rsquo;t pitch it in 30 seconds, you can&rsquo;t pitch it in 30 minutes.&rdquo;<br>The difference between a good startup and a <em>funded</em> startup is the pitch.</blockquote>
-      <cite>&mdash; From Chapter 1: Why Most Startups Fail at Global Pitching</cite>
+      <cite>&mdash; Sofian Meguellati, Pitch Coach</cite>
     </div>
   </div>
 
@@ -1369,7 +1363,7 @@
   <section id="lessons" class="section-dark">
     <div class="container">
       <p class="section-label">Key Lessons</p>
-      <h2 class="section-title">The takeaways that <span class="accent">change</span> how you pitch</h2>
+      <h2 class="section-title">8 lessons that <span class="accent">change</span> how you pitch</h2>
       <p class="jp-text" style="margin-bottom: 0;">ピッチの常識を変える重要なポイント</p>
 
       <div class="lessons-grid">
@@ -1412,7 +1406,7 @@
         <div class="lesson-card">
           <span class="lesson-num">07</span>
           <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
-          <h3>Choose the Right Speaker</h3>
+          <h3>One Voice, One Message</h3>
           <p>Pick strategy over fairness. One confident, globally experienced speaker is stronger than three nervous ones splitting slides.</p>
         </div>
         <div class="lesson-card">
@@ -1483,6 +1477,7 @@
       <p class="section-label">Proven Track Record</p>
       <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Trusted by leading institutions across Asia</h2>
       <p class="jp-text">アジアの主要機関に信頼された実績あるフレームワーク</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 12px;">Japan sessions launching 2026 &mdash; Tokyo &middot; Osaka &middot; Fukuoka &middot; further locations announced at launch</p>
 
       <div class="marquee-wrap">
         <div class="marquee-track">
@@ -1528,31 +1523,36 @@
   <!-- MASTERCLASS -->
   <section id="masterclass">
     <div class="container">
-      <p class="section-label">Masterclass</p>
-      <h2 class="section-title">Accompanied by 10 free masterclass sessions across Japan</h2>
-      <p class="jp-text" style="margin-bottom: 0;">日本全国で10回の無料マスタークラスを開催</p>
+      <p class="section-label">Distribution Strategy</p>
+      <h2 class="section-title">Every session puts the guide directly into founders' hands</h2>
+      <p class="jp-text" style="margin-bottom: 0;">全10回のセッションで、ガイドを起業家に直接届けます</p>
 
       <div class="masterclass-content">
         <div class="masterclass-photos">
-          <img src="masterclass at google for startups tokyo campus/IMG_4360 2.jpg" alt="Masterclass at Google for Startups Tokyo - wide shot">
-          <img src="masterclass at google for startups tokyo campus/5FEC2F49-2A3F-4ED2-A0EF-5EE88FBF8A7D 3.JPG" alt="Masterclass - rules for success">
-          <img src="masterclass at google for startups tokyo campus/BFD056F4-DCF4-4FDC-AC04-13FF31375EBF 3.JPG" alt="Sofian presenting at Google for Startups">
+          <img src="masterclass at google for startups tokyo campus/IMG_4360 2.jpg" alt="Live pitch masterclass at Google for Startups Tokyo — founders watching a presentation on what it takes to succeed globally" loading="lazy">
+          <img src="masterclass at google for startups tokyo campus/5FEC2F49-2A3F-4ED2-A0EF-5EE88FBF8A7D 3.JPG" alt="Slide showing the 6 rules for pitching success at a Google for Startups session" loading="lazy">
+          <img src="masterclass at google for startups tokyo campus/BFD056F4-DCF4-4FDC-AC04-13FF31375EBF 3.JPG" alt="Sofian Meguellati coaching startup founders at Google for Startups Tokyo campus" loading="lazy">
         </div>
         <div class="masterclass-info">
           <div style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
-            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">As featured at</span>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
             <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">Google for Startups</span>
           </div>
-          <h3>As featured at<br>Google for Startups Tokyo</h3>
-          <p>A hands-on pitch masterclass delivered 10 times at startup events and innovation hubs across Japan &mdash; each session designed to distribute the ebook and coach founders directly.</p>
+          <h3>The masterclass is the distribution engine</h3>
+          <p>Each of the 10 sessions is a live pitch masterclass &mdash; and a direct ebook distribution moment. Every founder who attends leaves with the guide. The masterclass isn't a separate product. It's how we guarantee the guide reaches 300&ndash;500 founders in person, across Japan.</p>
 
           <ul class="mc-features">
-            <li>Same proven masterclass format, delivered at 10 different locations and events</li>
-            <li>Each session includes free ebook distribution to all attendees</li>
-            <li>Sponsor logo prominently featured at every event</li>
-            <li>Direct access to Japanese startup founders at each session</li>
-            <li>Interactive pitch coaching with live feedback</li>
+            <li>10 masterclass sessions &times; 30&ndash;50 founders per session = 300&ndash;500 founders reached directly</li>
+            <li>Every attendee receives the ebook immediately at the session &mdash; no friction, no follow-up required</li>
+            <li>Partner logo displayed at every session and on every distributed copy</li>
+            <li>Locations span Tokyo and major startup hubs across Japan</li>
+            <li>Same proven format as the Google for Startups Tokyo session</li>
           </ul>
+
+          <div style="border-left: 3px solid var(--teal); background: rgba(0,180,160,0.04); padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 20px;">
+            <p style="margin: 0; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.65; font-style: italic;">&ldquo;Every ebook distributed carries your logo. Every session opens with your introduction. This is not event sponsorship &mdash; it&rsquo;s a content distribution partnership anchored by a live masterclass.&rdquo;</p>
+          </div>
         </div>
       </div>
     </div>
@@ -1562,15 +1562,16 @@
   <section class="author-section" id="author">
     <div class="container">
       <p class="section-label">About the Author</p>
-      <h2 class="section-title">Meet the coach <span class="accent">behind the framework</span></h2>
+      <h2 class="section-title">The coach <span class="accent">behind the framework</span></h2>
 
       <div class="author-content">
-        <img src="sofian pic pitchsprintjp.jpeg" alt="Sofian Meguellati" class="author-photo">
+        <img src="sofian pic pitchsprintjp.jpeg" alt="Sofian Meguellati — international pitch coach" class="author-photo" loading="lazy">
         <div class="author-info">
           <h3>Sofian Meguellati</h3>
+          <a href="https://www.linkedin.com/in/sofianmeguellati/" target="_blank" rel="noopener" class="linkedin-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Connect on LinkedIn</a>
           <p class="author-role">International Pitch Coach &bull; Paris &bull; Singapore &bull; Seoul &bull; Tokyo</p>
-          <p>Sofian Meguellati has spent over 12 years bridging the gap between Asian startups and global investors. Based across Paris, Singapore, Seoul, and Tokyo, he has coached more than 600 startups on crafting pitches that win funding &mdash; helping teams raise over $2.5M with global VCs in the last 12 months alone.</p>
-          <p>He has led 11 international programs with Korean government agencies, been featured at Google for Startups Tokyo, spoken at major events across Asia, and appeared on TBS broadcast. His frameworks are now being adapted for the Japanese startup ecosystem, bringing battle-tested pitch strategies to a new generation of founders going global.</p>
+          <p>Featured at Google for Startups Tokyo and with over 12 years bridging the gap between Asian startups and global investors, Sofian Meguellati has coached more than 600 startups on crafting pitches that win funding &mdash; helping teams raise over $2.5M with global VCs. Based across Paris, Singapore, Seoul, and Tokyo.</p>
+          <p>He has led 11 international programs with Korean government agencies, spoken at major events across Asia, and appeared on TBS broadcast. His frameworks are now available for the Japanese startup ecosystem, bringing battle-tested pitch strategies to a new generation of founders going global.</p>
         </div>
       </div>
     </div>
@@ -1581,14 +1582,16 @@
     <div class="container">
       <p class="section-label">協賛パートナー募集 / Become a Partner</p>
       <h2 class="section-title">Give your founders the global edge &mdash; and the credit for it</h2>
-      <p class="section-subtitle" style="max-width: 750px;">The organizations that support Japanese startup innovation aren&rsquo;t just writing checks. They&rsquo;re the reason founders succeed on the global stage. This is your opportunity to be that organization.</p>
+      <p class="section-subtitle" style="max-width: 750px;">The organizations that support Japanese startup innovation aren&rsquo;t just writing checks. They&rsquo;re the reason founders succeed on the global stage. Here&rsquo;s how to be that organization.</p>
       <p class="jp-text" style="font-size: 1rem; margin-top: 12px; max-width: 700px;">日本のスタートアップに世界で戦うためのツールを。その実績を、あなたの組織の成果として。</p>
 
-      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 40px; max-width: 750px; line-height: 1.7; border-left: 3px solid var(--teal); padding-left: 20px;">Every founder who downloads this guide and attends a masterclass session will know your organization made it possible. That&rsquo;s not a logo placement. That&rsquo;s a credibility transfer.</p>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 40px; max-width: 750px; line-height: 1.7; border-left: 3px solid var(--teal); padding-left: 20px;">Every founder who engages with this guide and a masterclass session will know your organization made it possible. That&rsquo;s not a logo placement. That&rsquo;s a credibility transfer.</p>
+
+      <p style="font-size: 1rem; font-weight: 600; color: var(--text); margin-top: 32px; max-width: 750px; line-height: 1.7;">This guide doesn&rsquo;t launch until a Lead Partner is confirmed. Your organization is the reason 300&ndash;500 Japanese founders get access to this methodology &mdash; and your name is on it from day one.</p>
 
       <div class="tier-cards">
         <div class="tier-card featured">
-          <h4>Title Partner</h4>
+          <h4>Lead Partner <span style="font-size: 0.7rem; font-weight: 500; color: var(--text-muted);">/ 主要パートナー</span></h4>
           <p class="tier-price">&yen;1,000,000 <span style="font-size: 0.75rem; font-weight: 500; color: var(--text-muted);">(税別)</span></p>
           <p class="tier-desc" style="font-size: 0.95rem; font-weight: 500;">&ldquo;Presented by [Your Organization]&rdquo; &mdash; exclusive, one partner only</p>
           <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Your organization becomes the face of Japan&rsquo;s global pitch framework. Every founder who opens this guide sees your name first. Every masterclass session opens with your introduction. You don&rsquo;t just support the ecosystem &mdash; you lead it.</p>
@@ -1600,12 +1603,12 @@
             <li>Your organization featured in every ebook download &mdash; estimated 1,000+ founders reached</li>
             <li>Priority access to session data and founder engagement summaries</li>
           </ul>
-          <p style="margin-top: 16px; font-size: 0.85rem; font-weight: 700; color: var(--teal);">1 organization only &mdash; exclusive title partnership</p>
+          <p style="margin-top: 16px; font-size: 0.85rem; font-weight: 700; color: var(--teal);">1 organization only &mdash; exclusive lead partnership</p>
         </div>
         <div class="tier-card">
           <h4>Supporting Partner</h4>
           <p class="tier-price">&yen;250,000 <span style="font-size: 0.75rem; font-weight: 500; color: var(--text-muted);">(税別)</span></p>
-          <p class="tier-desc" style="font-size: 0.95rem; font-weight: 500;">Join the partner network behind Japan&rsquo;s global pitch movement</p>
+          <p class="tier-desc" style="font-size: 0.95rem; font-weight: 500;">Join the partner network behind Japan&rsquo;s next global founders</p>
           <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Your organization&rsquo;s name sits alongside Japan&rsquo;s leading startup support institutions &mdash; a visible signal that you invest in founder success beyond borders.</p>
           <ul class="tier-features">
             <li>Logo in the Supporting Partners section of the landing page</li>
@@ -1614,21 +1617,21 @@
             <li>Association with a methodology trusted by 600+ startups across Asia</li>
             <li>Access to post-event session summaries</li>
           </ul>
+          <p style="margin-top: 16px; font-size: 0.85rem; font-weight: 700; color: var(--teal);">Limited to 5 Supporting Partners per year</p>
         </div>
       </div>
 
       <div style="margin-top: 56px; text-align: center;">
-        <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: var(--text);">Ready to be the organization that equipped Japanese founders for the global stage?</h3>
+        <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: var(--text);">Ready to be the organization that equips Japanese founders for the global stage?</h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px;">日本のスタートアップの海外展開を支援するパートナーとして、ともに歩みませんか。</p>
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <a href="mailto:sofian@depitch.academy?subject=Title%20Partnership%20Inquiry%20%E2%80%94%20Global%20Pitch%20Guide%20Japan" class="btn btn-primary" style="font-size: 1rem; padding: 16px 36px;">
-            Inquire about Title Partnership &rarr;
+          <a href="mailto:sofian@depitch.academy?subject=Lead%20Partnership%20Inquiry%20%E2%80%94%20Global%20Pitch%20Guide%20Japan" class="btn btn-primary" style="font-size: 1rem; padding: 16px 36px;">
+            Inquire about Lead Partnership &rarr;
           </a>
           <a href="mailto:sofian@depitch.academy?subject=Supporting%20Partnership%20Inquiry%20%E2%80%94%20Global%20Pitch%20Guide%20Japan" class="btn btn-outline" style="font-size: 1rem; padding: 16px 36px;">
             Inquire about Supporting Partnership &rarr;
           </a>
         </div>
-        <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.82rem;">Currently in discussion with startup support organizations across Tokyo, Osaka, and Fukuoka.</p>
       </div>
     </div>
   </section>
