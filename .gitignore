@@ -1,0 +1,17 @@
+.DS_Store
+.claude/
+*.pages
+*.pdf
+*.ai
+*.psd
+*.zip
+*.woff2
+*.css
+
+# Ebook content - never commit
+ebook all design materials/
+ebook *.webp
+selling point *.jpg
+landing-page-roast.skill
+tasks/
+CLAUDE.md

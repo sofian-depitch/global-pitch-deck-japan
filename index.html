@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ultimate Pitch Deck Guide for Japanese Startups Going Global</title>
+  <meta name="description" content="Free guide helping Japanese startups craft world-class pitch decks for international investors and partners.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #00B4A0;
+      --teal-light: #00D4BD;
+      --teal-dark: #009688;
+      --bg: #ffffff;
+      --bg-alt: #f7f8fa;
+      --bg-card: #ffffff;
+      --bg-dark-section: #f0f2f5;
+      --text: #1a1a1a;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+      --border-light: #edf2f7;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+      --radius: 12px;
+      --radius-lg: 20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- NAVBAR --- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-weight: 900;
+      font-size: 1.2rem;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-mobile-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+    /* --- SECTIONS --- */
+    section { padding: 100px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: #fff;
+      background: var(--teal);
+      padding: 5px 14px;
+      border-radius: 4px;
+      box-shadow: 0 0 14px rgba(0,180,160,0.35);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    .jp-text {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* --- HERO --- */
+    .hero {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #f0faf8 0%, var(--bg) 100%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(0,180,160,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Hero credential badge */
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 6px 18px 6px 8px;
+      margin-bottom: 28px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-sm);
+    }
+    .hero-badge img {
+      height: 22px;
+      object-fit: contain;
+    }
+    .hero-badge .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    /* Title Sponsor Box */
+    .sponsor-hero-box {
+      display: inline-block;
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      padding: 20px 48px;
+      margin-bottom: 40px;
+      position: relative;
+      background: rgba(0,180,160,0.04);
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 0 20px rgba(0,180,160,0.12);
+    }
+    .sponsor-hero-box:hover {
+      background: rgba(0,180,160,0.08);
+      border-color: var(--teal-light);
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(0,180,160,0.2);
+    }
+    .sponsor-hero-box .label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--teal-dark);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .sponsor-hero-box .placeholder {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 2px;
+    }
+    .sponsor-hero-box .badge {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5.5vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin-bottom: 8px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--text);
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero .jp-hero {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+    }
+
+    /* Hero layout: text + book */
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .hero-text { flex: 1; min-width: 320px; text-align: left; }
+    .hero-text h1 { margin-left: 0; margin-right: 0; }
+    .hero-text .jp-hero { text-align: left; }
+    .hero-text .subtitle { margin-left: 0; margin-right: 0; text-align: left; }
+
+    /* 3D Book */
+    .book-wrapper { perspective: 1200px; flex-shrink: 0; }
+    .book {
+      width: 220px;
+      height: 310px;
+      position: relative;
+      transform: rotateY(-25deg) rotateX(5deg);
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+    .book:hover { transform: rotateY(-15deg) rotateX(3deg); }
+    .book-cover {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, #1a1a1a, #111);
+      border: 2px solid #333;
+      border-radius: 4px 12px 12px 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+      box-shadow: 8px 8px 30px rgba(0,0,0,0.3), inset 0 0 0 1px rgba(255,255,255,0.05);
+    }
+    .book-cover::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 0 80px 80px;
+      border-color: transparent transparent var(--teal) transparent;
+      opacity: 0.8;
+      border-radius: 0 0 12px 0;
+    }
+    .book-cover .book-label {
+      font-size: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--teal);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .book-cover .book-title {
+      font-size: 1rem;
+      font-weight: 800;
+      line-height: 1.3;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .book-cover .book-edition {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #999;
+      font-weight: 600;
+    }
+    .book-spine {
+      position: absolute;
+      left: -20px;
+      top: 0;
+      width: 20px;
+      height: 100%;
+      background: linear-gradient(to right, #222, #1a1a1a);
+      transform: rotateY(90deg);
+      transform-origin: right center;
+      border-radius: 4px 0 0 4px;
+    }
+    .book-shadow {
+      position: absolute;
+      bottom: -20px;
+      left: 10%;
+      width: 80%;
+      height: 20px;
+      background: radial-gradient(ellipse, rgba(0,180,160,0.1) 0%, transparent 70%);
+      filter: blur(8px);
+    }
+
+    /* CTA button */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--teal-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,180,160,0.25);
+    }
+    .btn-disabled {
+      background: var(--bg-dark-section);
+      color: var(--text-muted);
+      cursor: not-allowed;
+      position: relative;
+      border: 1px solid var(--border);
+    }
+    .btn-disabled:hover { transform: none; box-shadow: none; }
+    .btn-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 0.6rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--teal);
+      border: 2px solid var(--teal);
+    }
+    .btn-outline:hover {
+      background: var(--teal);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--teal);
+      letter-spacing: -1px;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* --- SPONSOR ROW --- */
+    .sponsors-section {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .sponsor-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .sponsor-placeholder {
+      width: 180px;
+      height: 100px;
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s;
+      cursor: pointer;
+      background: rgba(0,180,160,0.03);
+      box-shadow: 0 0 16px rgba(0,180,160,0.08);
+    }
+    .sponsor-placeholder:hover {
+      border-color: var(--teal-light);
+      background: rgba(0,180,160,0.06);
+      box-shadow: 0 0 24px rgba(0,180,160,0.15);
+      transform: translateY(-2px);
+    }
+    .sponsor-placeholder span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .sponsor-placeholder .sponsor-cta {
+      font-size: 0.65rem;
+      color: var(--teal);
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* --- EXECUTIVE SUMMARY --- */
+    .exec-summary-content {
+      display: flex;
+      gap: 48px;
+      margin-top: 48px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .exec-summary-text {
+      flex: 1.2;
+      min-width: 320px;
+    }
+    .exec-summary-text p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+    .exec-summary-highlights {
+      flex: 0.8;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .highlight-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .highlight-box h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .highlight-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* --- KEY LESSONS --- */
+    .lessons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .lesson-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: all 0.3s;
+      position: relative;
+      box-shadow: var(--shadow-sm);
+    }
+    .lesson-card:hover {
+      border-color: rgba(0,180,160,0.35);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .lesson-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(0,180,160,0.08);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+    }
+    .lesson-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.4;
+      color: var(--text);
+    }
+    .lesson-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* --- DESIGN ACCENTS --- */
+    .accent {
+      color: var(--teal);
+    }
+    .callout {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      background: rgba(0,180,160,0.05);
+      border-left: 3px solid var(--teal);
+      padding: 20px 24px;
+      border-radius: 0 8px 8px 0;
+      line-height: 1.6;
+      margin-top: 40px;
+      margin-bottom: 32px;
+      max-width: 800px;
+    }
+    .callout strong { color: var(--teal); }
+    .card-num-big {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 52px;
+      font-weight: 900;
+      color: rgba(0,0,0,0.03);
+      line-height: 1;
+      letter-spacing: -2px;
+      user-select: none;
+      pointer-events: none;
+    }
+    .dot-grid {
+      background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .selling-points-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 0;
+    }
+    .selling-point-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px;
+      position: relative;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .selling-point-card:hover {
+      border-color: rgba(0,180,160,0.3);
+      border-left-color: var(--teal-light);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .selling-point-card .sp-icon {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .selling-point-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .selling-point-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .lesson-num {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 36px;
+      font-weight: 900;
+      color: rgba(0,180,160,0.06);
+      line-height: 1;
+      letter-spacing: -1px;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    /* --- CHAPTERS / CONTENTS --- */
+    .chapters-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .chapter-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .chapter-card:hover {
+      border-color: rgba(0,180,160,0.3);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .chapter-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(0,180,160,0.08);
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 800;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .chapter-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.4;
+      color: var(--text);
+    }
+    .chapter-card .jp-text {
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+    .chapter-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* --- AUDIENCE --- */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .audience-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .audience-card:hover {
+      border-color: rgba(0,180,160,0.2);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .audience-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .audience-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .audience-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .audience-card .jp-audience {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* --- TRACK RECORD --- */
+    .track-record { background: var(--bg-alt); }
+    .marquee-wrap {
+      overflow: hidden;
+      margin-top: 40px;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      width: max-content;
+      animation: marquee-scroll 45s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .marquee-track img {
+      height: 28px;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+      opacity: 0.35;
+      filter: brightness(0);
+      transition: opacity 0.3s;
+      flex-shrink: 0;
+    }
+    .marquee-track img.logo-wide {
+      max-width: 200px;
+    }
+    .marquee-track img:hover {
+      opacity: 0.7;
+    }
+
+    /* --- MASTERCLASS --- */
+    .masterclass-content {
+      display: flex;
+      gap: 48px;
+      margin-top: 48px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .masterclass-photos {
+      flex: 1;
+      min-width: 300px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .masterclass-photos img {
+      width: 100%;
+      border-radius: var(--radius);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      box-shadow: var(--shadow-md);
+    }
+    .masterclass-photos img:first-child {
+      grid-column: 1 / -1;
+      aspect-ratio: 16/9;
+    }
+    .masterclass-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .masterclass-info h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .masterclass-info p {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.7;
+    }
+    .mc-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .mc-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+    .mc-features li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: rgba(0,180,160,0.12);
+      border-radius: 50%;
+      margin-top: 2px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300B4A0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* --- AUTHOR --- */
+    .author-section { background: var(--bg-alt); }
+    .author-content {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+    .author-photo {
+      width: 260px;
+      height: 260px;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      border: 3px solid var(--border);
+      flex-shrink: 0;
+      box-shadow: var(--shadow-md);
+    }
+    .author-info { flex: 1; min-width: 300px; }
+    .author-info h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .author-info .author-role {
+      color: var(--teal);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .author-info p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-size: 1.02rem;
+    }
+
+    /* --- SPONSOR CTA --- */
+    .sponsor-cta-section {
+      background: linear-gradient(135deg, rgba(0,180,160,0.05), rgba(0,180,160,0.01));
+      border-top: 1px solid rgba(0,180,160,0.15);
+      border-bottom: 1px solid rgba(0,180,160,0.15);
+    }
+    .sponsor-cta-section .section-title {
+      max-width: 700px;
+    }
+    .benefits-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 32px 0;
+      max-width: 600px;
+    }
+    .benefits-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+    .benefits-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      background: rgba(0,180,160,0.12);
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300B4A0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .tier-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .tier-card {
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      position: relative;
+      transition: all 0.3s;
+      background: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+    }
+    .tier-card:hover {
+      border-color: var(--teal);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .tier-card.featured {
+      border-color: var(--teal);
+      background: linear-gradient(135deg, rgba(0,180,160,0.04), transparent);
+    }
+    .tier-card.featured::before {
+      content: 'RECOMMENDED';
+      position: absolute;
+      top: -12px;
+      left: 24px;
+      background: var(--teal);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+    }
+    .tier-card h4 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .tier-price {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 12px;
+    }
+    .tier-card .tier-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .tier-features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .tier-features li {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      padding-left: 20px;
+      position: relative;
+    }
+    .tier-features li::before {
+      content: '~';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-weight: 700;
+    }
+
+    /* --- HIGHLIGHT STRIP --- */
+    .highlight-strip {
+      background: linear-gradient(135deg, #0a2520, #0d3d34);
+      padding: 48px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .highlight-strip::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 140%;
+      height: 200%;
+      background: radial-gradient(ellipse, rgba(0,180,160,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .highlight-strip .strip-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .highlight-strip blockquote {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .highlight-strip blockquote em {
+      font-style: normal;
+      color: var(--teal-light);
+    }
+    .highlight-strip cite {
+      font-style: normal;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* --- DARK SECTION (lessons) --- */
+    .section-dark {
+      background: linear-gradient(180deg, #111820 0%, #0d1a15 100%);
+      color: #fff;
+    }
+    .section-dark .section-title { color: #fff; }
+    .section-dark .jp-text { color: rgba(255,255,255,0.4); }
+    .section-dark .lesson-card {
+      background: rgba(255,255,255,0.04);
+      border-color: rgba(255,255,255,0.08);
+    }
+    .section-dark .lesson-card:hover {
+      border-color: rgba(0,180,160,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+    .section-dark .lesson-card h3 { color: #fff; }
+    .section-dark .lesson-card p { color: rgba(255,255,255,0.55); }
+    .section-dark .lesson-num { color: rgba(0,180,160,0.08); }
+
+    /* --- AUDIENCE ALTERNATE LAYOUT --- */
+    .audience-card-alt {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .audience-card-alt:hover {
+      border-color: rgba(0,180,160,0.2);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .audience-card-alt .aud-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .audience-card-alt h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .audience-card-alt p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .audience-card-alt .jp-audience {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+    .audience-grid-alt {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    @media (max-width: 768px) {
+      .audience-grid-alt { grid-template-columns: 1fr; }
+      .highlight-strip blockquote { font-size: 1.1rem; }
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 48px 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      background: var(--bg-alt);
+    }
+    footer .footer-brand {
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    footer .footer-brand span { color: var(--teal); }
+    footer p {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    footer a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      nav { padding: 0 16px; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        padding: 20px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-mobile-toggle { display: block; }
+      section { padding: 60px 16px; }
+      .hero { padding-top: 110px; }
+      .hero-content { flex-direction: column-reverse; gap: 32px; }
+      .hero-text { text-align: center; min-width: auto; }
+      .hero-text h1 { margin-left: auto; margin-right: auto; }
+      .hero-text .jp-hero { text-align: center; }
+      .hero-text .subtitle { margin-left: auto; margin-right: auto; text-align: center; }
+      .book { width: 170px; height: 240px; }
+      .stats { gap: 24px; }
+      .stat-number { font-size: 1.8rem; }
+      .sponsor-hero-box { padding: 16px 28px; }
+      .sponsor-hero-box .placeholder { font-size: 1.1rem; }
+      .exec-summary-content { flex-direction: column; }
+      .selling-points-grid { grid-template-columns: 1fr; }
+      .lessons-grid { grid-template-columns: 1fr; }
+      .chapters-grid { grid-template-columns: 1fr; }
+      .masterclass-content { flex-direction: column; }
+      .author-content { flex-direction: column; text-align: center; }
+      .author-photo { width: 200px; height: 200px; }
+      .tier-cards { grid-template-columns: 1fr; }
+      .marquee-track img { height: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Global Pitch <span>Deck</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#contents">Contents</a></li>
+        <li><a href="#lessons">Key Lessons</a></li>
+        <li><a href="#masterclass">Masterclass</a></li>
+        <li><a href="#author">Author</a></li>
+        <li><a href="#sponsor" style="color: var(--teal); font-weight: 700;">Become a Sponsor</a></li>
+      </ul>
+      <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Title Sponsor Spot -->
+    <a href="#sponsor" class="sponsor-hero-box" style="text-decoration:none;">
+      <div class="badge">Title Sponsor</div>
+      <div class="label">Presented by</div>
+      <div class="placeholder">YOUR LOGO HERE</div>
+    </a>
+
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h1>Win Global Investors with a Pitch Deck That <em>Actually Works</em></h1>
+        <p class="jp-hero">グローバル投資家を動かすピッチデックの作り方</p>
+        <p class="subtitle">The proven framework used by 600+ startups to close deals with international VCs and partners. Built for Japanese founders going global.</p>
+
+        <div style="position: relative; display: inline-block;">
+          <button class="btn btn-disabled" disabled>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Free eBook
+          </button>
+          <span class="btn-badge">Launching Soon / ローンチ準備中</span>
+        </div>
+      </div>
+
+      <div class="book-wrapper">
+        <div class="book">
+          <div class="book-cover">
+            <span class="book-label">Japan Edition</span>
+            <span class="book-title">The Ultimate Pitch Deck Guide</span>
+            <span class="book-edition">87 Pages &bull; 6 Chapters</span>
+          </div>
+          <div class="book-spine"></div>
+          <div class="book-shadow"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats container">
+      <div class="stat">
+        <div class="stat-number">600+</div>
+        <div class="stat-label">Startups coached globally</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$2.5M+</div>
+        <div class="stat-label">Raised with global VCs in 12 months</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">10</div>
+        <div class="stat-label">Masterclass sessions across Japan</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORTING SPONSORS -->
+  <section class="sponsors-section">
+    <div class="container" style="text-align: center;">
+      <p class="section-label">Supporting Partners</p>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">協賛パートナー</h2>
+      <div class="sponsor-row">
+        <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
+          <span>Your Logo Here</span>
+          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+        </a>
+        <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
+          <span>Your Logo Here</span>
+          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+        </a>
+        <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
+          <span>Your Logo Here</span>
+          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+        </a>
+        <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
+          <span>Your Logo Here</span>
+          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+        </a>
+        <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
+          <span>Your Logo Here</span>
+          <span class="sponsor-cta">Become a Sponsor &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY -->
+  <section id="summary">
+    <div class="container">
+      <p class="section-label">Executive Summary</p>
+      <h2 class="section-title">What this guide will <span class="accent">teach you</span></h2>
+      <p class="jp-text" style="margin-bottom: 0;">このガイドで学べること</p>
+
+      <div class="callout">
+        Built for bold Japanese startups ready to turn short pitch sessions into real global deals. Backed by insights from hundreds of pitch trainings across Asia, the US, and Europe &mdash; a <strong>proven, step-by-step framework</strong> to master your most powerful growth tool: your pitch.
+      </div>
+
+      <div class="selling-points-grid">
+        <div class="selling-point-card">
+          <span class="sp-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+          <h4>No Fluff, All Substance</h4>
+          <p>87 pages covering 5 critical areas: common mistakes, global mindset, deck structure, presentation skills, and practical pitch advice.</p>
+        </div>
+        <div class="selling-point-card">
+          <span class="sp-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
+          <h4>The Real Problem</h4>
+          <p>Translating domestic pitch decks doesn&rsquo;t work globally. This guide teaches you to think and pitch like a global founder from day one.</p>
+        </div>
+        <div class="selling-point-card">
+          <span class="sp-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></span>
+          <h4>Common Mistakes Decoded</h4>
+          <p>4 traps that kill international pitches: bragging credentials, over-emphasizing patents, verbose problems, and cramming slides.</p>
+        </div>
+        <div class="selling-point-card">
+          <span class="sp-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+          <h4>Beyond the Deck</h4>
+          <p>Storytelling mastery, Q&amp;A strategy, speaker selection, and the &ldquo;multiverse&rdquo; approach to pitch prep for any situation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INSIDE -->
+  <section id="contents" style="background: var(--bg-alt);">
+    <div class="container">
+      <p class="section-label">What's Inside</p>
+      <h2 class="section-title">6 chapters of <span class="accent">battle-tested</span> frameworks</h2>
+      <p class="section-subtitle">Every chapter distilled from 12+ years of coaching startups to pitch on the global stage.</p>
+
+      <div class="chapters-grid">
+        <div class="chapter-card">
+          <div class="card-num-big">01</div>
+          <div class="chapter-number">01</div>
+          <h3>Why Most Startups Fail at Global Pitching</h3>
+          <p class="jp-text">グローバルピッチングで失敗する理由</p>
+          <p>Common mistakes: vague messaging, jargon overload, weak storytelling, no clear call-to-action. Learn what kills pitches before they even start.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="card-num-big">02</div>
+          <div class="chapter-number">02</div>
+          <h3>The Mindset of the Global Pitch</h3>
+          <p class="jp-text">グローバルピッチのマインドセット</p>
+          <p>Elevator pitch mastery, empathizing with your audience, and managing stakeholder interests &mdash; from CEOs to VCs to end-users.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="card-num-big">03</div>
+          <div class="chapter-number">03</div>
+          <h3>Anatomy of the Perfect Pitch Deck</h3>
+          <p class="jp-text">完璧なピッチデックの構成</p>
+          <p>The complete 10-slide framework: intro, problem, value proposition, solution, business model, competition, team, global strategy, CTA, and conclusion &mdash; with real examples.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="card-num-big">04</div>
+          <div class="chapter-number">04</div>
+          <h3>Q&A: A Strategic Tool</h3>
+          <p class="jp-text">Q&Aセッション戦略</p>
+          <p>Turn Q&A into your strongest moment. Prepare backup slides, master the right expressions, and avoid the phrases that kill credibility.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="card-num-big">05</div>
+          <div class="chapter-number">05</div>
+          <h3>The Power of Storytelling</h3>
+          <p class="jp-text">ストーリーテリングの力</p>
+          <p>The 3 essential elements: Why, Struggle, and Happy Ending. Practice with movies, learn from great speakers, and bring your pitch to life.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="card-num-big">06</div>
+          <div class="chapter-number">06</div>
+          <h3>Final Advice to Excel</h3>
+          <p class="jp-text">成功のためのアドバイス</p>
+          <p>Multiverse pitch prep (5-second, 30-second &amp; 5-minute versions), "wow" moments, choosing the right speaker, and 6 essential rules for success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHT STRIP -->
+  <div class="highlight-strip">
+    <div class="strip-content">
+      <blockquote>&ldquo;If you can&rsquo;t pitch it in 30 seconds, you can&rsquo;t pitch it in 30 minutes.&rdquo;<br>The difference between a good startup and a <em>funded</em> startup is the pitch.</blockquote>
+      <cite>&mdash; From Chapter 1: Why Most Startups Fail at Global Pitching</cite>
+    </div>
+  </div>
+
+  <!-- KEY LESSONS -->
+  <section id="lessons" class="section-dark">
+    <div class="container">
+      <p class="section-label">Key Lessons</p>
+      <h2 class="section-title">The takeaways that <span class="accent">change</span> how you pitch</h2>
+      <p class="jp-text" style="margin-bottom: 0;">ピッチの常識を変える重要なポイント</p>
+
+      <div class="lessons-grid">
+        <div class="lesson-card">
+          <span class="lesson-num">01</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <h3>Clarity Beats Complexity</h3>
+          <p>If you can&rsquo;t explain your solution in plain language, investors assume you don&rsquo;t fully understand it yourself. Kill the jargon.</p>
+        </div>
+        <div class="lesson-card">
+          <span class="lesson-num">02</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3>Pitching Is a Performance</h3>
+          <p>It&rsquo;s not a report or a presentation &mdash; it&rsquo;s a show. Use voice, body language, and emotional rhythm to connect with your audience.</p>
+        </div>
+        <div class="lesson-card">
+          <span class="lesson-num">03</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <h3>The 10-Slide Framework</h3>
+          <p>Intro, Problem, Value Proposition, Solution, Business Model, Competition, Team, Global Strategy, CTA, and Conclusion &mdash; in that order.</p>
+        </div>
+        <div class="lesson-card">
+          <span class="lesson-num">04</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <h3>Q&amp;A Is Your Secret Weapon</h3>
+          <p>Prepare 5&ndash;10 tough questions in advance. If handled well, Q&amp;A can elevate your entire pitch and build deep credibility.</p>
+        </div>
+        <div class="lesson-card">
+          <span class="lesson-num">05</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <h3>Storytelling Wins Deals</h3>
+          <p>The 3 essential elements: Why you started, the Struggle you faced, and the Happy Ending you&rsquo;re building. Emotion creates memory.</p>
+        </div>
+        <div class="lesson-card">
+          <span class="lesson-num">06</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <h3>The Multiverse Approach</h3>
+          <p>Prepare 3 versions: 5-second hook, 30-second teaser, and 5-minute full story. Start short, earn the longer conversation.</p>
+        </div>
+        <div class="lesson-card">
+          <span class="lesson-num">07</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+          <h3>Choose the Right Speaker</h3>
+          <p>Pick strategy over fairness. One confident, globally experienced speaker is stronger than three nervous ones splitting slides.</p>
+        </div>
+        <div class="lesson-card">
+          <span class="lesson-num">08</span>
+          <div class="lesson-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Insert a &ldquo;Wow&rdquo; Moment</h3>
+          <p>A surprising stat, bold claim, or emotional story in the first 30 seconds breaks the pattern and locks in attention.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IS THIS FOR -->
+  <section>
+    <div class="container">
+      <p class="section-label">Who Is This For</p>
+      <h2 class="section-title">Built for Japan's most <span class="accent">ambitious</span> founders</h2>
+      <p class="jp-text" style="margin-bottom: 0;">日本で最も野心的なスタートアップのために</p>
+
+      <div class="audience-grid-alt">
+        <div class="audience-card-alt">
+          <div class="aud-icon-wrap" style="background: rgba(0,180,160,0.08);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/><line x1="12" y1="11" x2="12" y2="15"/></svg>
+          </div>
+          <div>
+            <h3>Corporate Innovation Labs</h3>
+            <p>Intrapreneurs and innovation teams inside large Japanese corporates preparing to pitch new ventures to global partners.</p>
+            <p class="jp-audience">大企業イノベーション部門</p>
+          </div>
+        </div>
+        <div class="audience-card-alt">
+          <div class="aud-icon-wrap" style="background: rgba(99,102,241,0.08);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h3>University Spin-outs</h3>
+            <p>Researchers and academic founders turning deep-tech IP into investor-ready startups with global ambitions.</p>
+            <p class="jp-audience">大学発スタートアップ</p>
+          </div>
+        </div>
+        <div class="audience-card-alt">
+          <div class="aud-icon-wrap" style="background: rgba(245,158,11,0.08);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M9 8h1"/><path d="M9 12h1"/><path d="M9 16h1"/><path d="M14 8h1"/><path d="M14 12h1"/><path d="M14 16h1"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/></svg>
+          </div>
+          <div>
+            <h3>METI &amp; JETRO Participants</h3>
+            <p>Founders in government-backed international programs who need to pitch confidently at overseas demo days and trade events.</p>
+            <p class="jp-audience">経産省・JETRO支援事業参加者</p>
+          </div>
+        </div>
+        <div class="audience-card-alt">
+          <div class="aud-icon-wrap" style="background: rgba(236,72,153,0.08);">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div>
+            <h3>First-Time Global Founders</h3>
+            <p>Japanese founders pitching to international investors for the first time &mdash; no prior global fundraising experience required.</p>
+            <p class="jp-audience">初めて海外展開する創業者</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACK RECORD -->
+  <section class="track-record dot-grid" id="track-record">
+    <div class="container" style="text-align: center;">
+      <p class="section-label">Proven Track Record</p>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto;">Trusted by leading institutions across Asia</h2>
+      <p class="jp-text">アジアの主要機関に信頼された実績あるフレームワーク</p>
+
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <!-- First set -->
+          <img src="logos-white/google-for-startups-tokyo.png" alt="Google for Startups Tokyo" title="Google for Startups Tokyo Campus">
+          <img src="logos-white/shibuya-startup-support.svg" alt="Shibuya Startup Support" title="Shibuya Startup Support" class="logo-wide">
+          <img src="logos-white/enterprise-singapore.png" alt="Enterprise Singapore" title="Enterprise Singapore">
+          <img src="logos-white/kita.png" alt="KITA" title="Korea International Trade Association">
+          <img src="logos-white/kised.png" alt="KISED" title="Korea Institute of Startup & Entrepreneurship Development">
+          <img src="logos-white/korea-investment.png" alt="Korea Investment" title="Korea Investment">
+          <img src="logos-white/kb-financial.png" alt="KB Financial Group" title="KB Financial Group">
+          <img src="logos-white/shinhan-futures-lab.png" alt="Shinhan Future's Lab" title="Shinhan Future's Lab">
+          <img src="logos-white/nipa.png" alt="NIPA" title="National IT Industry Promotion Agency">
+          <img src="logos-white/innopolis.png" alt="Innopolis Foundation" title="Innopolis Foundation">
+          <img src="logos-white/kto.png" alt="KTO" title="Korea Tourism Organization">
+          <img src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI" title="Daejeon Creative Economy Innovation Center">
+          <img src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk Creative Economy Innovation Center">
+          <img src="logos-white/hanyang-university.png" alt="Hanyang University" title="Hanyang University">
+          <img src="logos-white/sungkyunkwan-university.png" alt="Sungkyunkwan University" title="Sungkyunkwan University">
+          <img src="logos-white/kocca.png" alt="KOCCA" title="Korea Creative Content Agency">
+          <!-- Duplicate set for seamless loop -->
+          <img src="logos-white/google-for-startups-tokyo.png" alt="Google for Startups Tokyo" title="Google for Startups Tokyo Campus">
+          <img src="logos-white/shibuya-startup-support.svg" alt="Shibuya Startup Support" title="Shibuya Startup Support" class="logo-wide">
+          <img src="logos-white/enterprise-singapore.png" alt="Enterprise Singapore" title="Enterprise Singapore">
+          <img src="logos-white/kita.png" alt="KITA" title="Korea International Trade Association">
+          <img src="logos-white/kised.png" alt="KISED" title="Korea Institute of Startup & Entrepreneurship Development">
+          <img src="logos-white/korea-investment.png" alt="Korea Investment" title="Korea Investment">
+          <img src="logos-white/kb-financial.png" alt="KB Financial Group" title="KB Financial Group">
+          <img src="logos-white/shinhan-futures-lab.png" alt="Shinhan Future's Lab" title="Shinhan Future's Lab">
+          <img src="logos-white/nipa.png" alt="NIPA" title="National IT Industry Promotion Agency">
+          <img src="logos-white/innopolis.png" alt="Innopolis Foundation" title="Innopolis Foundation">
+          <img src="logos-white/kto.png" alt="KTO" title="Korea Tourism Organization">
+          <img src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI" title="Daejeon Creative Economy Innovation Center">
+          <img src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk Creative Economy Innovation Center">
+          <img src="logos-white/hanyang-university.png" alt="Hanyang University" title="Hanyang University">
+          <img src="logos-white/sungkyunkwan-university.png" alt="Sungkyunkwan University" title="Sungkyunkwan University">
+          <img src="logos-white/kocca.png" alt="KOCCA" title="Korea Creative Content Agency">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASTERCLASS -->
+  <section id="masterclass">
+    <div class="container">
+      <p class="section-label">Masterclass</p>
+      <h2 class="section-title">Accompanied by 10 free masterclass sessions across Japan</h2>
+      <p class="jp-text" style="margin-bottom: 0;">日本全国で10回の無料マスタークラスを開催</p>
+
+      <div class="masterclass-content">
+        <div class="masterclass-photos">
+          <img src="masterclass at google for startups tokyo campus/IMG_4360 2.jpg" alt="Masterclass at Google for Startups Tokyo - wide shot">
+          <img src="masterclass at google for startups tokyo campus/5FEC2F49-2A3F-4ED2-A0EF-5EE88FBF8A7D 3.JPG" alt="Masterclass - rules for success">
+          <img src="masterclass at google for startups tokyo campus/BFD056F4-DCF4-4FDC-AC04-13FF31375EBF 3.JPG" alt="Sofian presenting at Google for Startups">
+        </div>
+        <div class="masterclass-info">
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; margin-bottom: 16px; box-shadow: var(--shadow-sm);">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <span style="font-size: 0.82rem; font-weight: 600; color: var(--text-secondary);">Google for Startups</span>
+          </div>
+          <h3>As featured at<br>Google for Startups Tokyo</h3>
+          <p>A hands-on pitch masterclass delivered 10 times at startup events and innovation hubs across Japan &mdash; each session designed to distribute the ebook and coach founders directly.</p>
+
+          <ul class="mc-features">
+            <li>Same proven masterclass format, delivered at 10 different locations and events</li>
+            <li>Each session includes free ebook distribution to all attendees</li>
+            <li>Sponsor logo prominently featured at every event</li>
+            <li>Direct access to Japanese startup founders at each session</li>
+            <li>Interactive pitch coaching with live feedback</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="author-section" id="author">
+    <div class="container">
+      <p class="section-label">About the Author</p>
+      <h2 class="section-title">Meet the coach <span class="accent">behind the framework</span></h2>
+
+      <div class="author-content">
+        <img src="sofian pic pitchsprintjp.jpeg" alt="Sofian Meguellati" class="author-photo">
+        <div class="author-info">
+          <h3>Sofian Meguellati</h3>
+          <p class="author-role">International Pitch Coach &bull; Paris &bull; Singapore &bull; Seoul &bull; Tokyo</p>
+          <p>Sofian Meguellati has spent over 12 years bridging the gap between Asian startups and global investors. Based across Paris, Singapore, Seoul, and Tokyo, he has coached more than 600 startups on crafting pitches that win funding &mdash; helping teams raise over $2.5M with global VCs in the last 12 months alone.</p>
+          <p>He has led 11 international programs with Korean government agencies, been featured at Google for Startups Tokyo, spoken at major events across Asia, and appeared on TBS broadcast. His frameworks are now being adapted for the Japanese startup ecosystem, bringing battle-tested pitch strategies to a new generation of founders going global.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BECOME A PARTNER -->
+  <section class="sponsor-cta-section" id="sponsor">
+    <div class="container">
+      <p class="section-label">協賛パートナー募集 / Become a Partner</p>
+      <h2 class="section-title">Give your founders the global edge &mdash; and the credit for it</h2>
+      <p class="section-subtitle" style="max-width: 750px;">The organizations that support Japanese startup innovation aren&rsquo;t just writing checks. They&rsquo;re the reason founders succeed on the global stage. This is your opportunity to be that organization.</p>
+      <p class="jp-text" style="font-size: 1rem; margin-top: 12px; max-width: 700px;">日本のスタートアップに世界で戦うためのツールを。その実績を、あなたの組織の成果として。</p>
+
+      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 40px; max-width: 750px; line-height: 1.7; border-left: 3px solid var(--teal); padding-left: 20px;">Every founder who downloads this guide and attends a masterclass session will know your organization made it possible. That&rsquo;s not a logo placement. That&rsquo;s a credibility transfer.</p>
+
+      <div class="tier-cards">
+        <div class="tier-card featured">
+          <h4>Title Partner</h4>
+          <p class="tier-price">&yen;1,000,000 <span style="font-size: 0.75rem; font-weight: 500; color: var(--text-muted);">(税別)</span></p>
+          <p class="tier-desc" style="font-size: 0.95rem; font-weight: 500;">&ldquo;Presented by [Your Organization]&rdquo; &mdash; exclusive, one partner only</p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Your organization becomes the face of Japan&rsquo;s global pitch framework. Every founder who opens this guide sees your name first. Every masterclass session opens with your introduction. You don&rsquo;t just support the ecosystem &mdash; you lead it.</p>
+          <ul class="tier-features">
+            <li>&ldquo;Presented by [Your Organization]&rdquo; on the ebook cover and landing page hero</li>
+            <li>Opening mention and logo display at all 10 masterclass sessions across Japan</li>
+            <li>Direct access to 300&ndash;500 startup founders across 10 live sessions</li>
+            <li>Co-branded marketing materials for all event communications</li>
+            <li>Your organization featured in every ebook download &mdash; estimated 1,000+ founders reached</li>
+            <li>Priority access to session data and founder engagement summaries</li>
+          </ul>
+          <p style="margin-top: 16px; font-size: 0.85rem; font-weight: 700; color: var(--teal);">1 organization only &mdash; exclusive title partnership</p>
+        </div>
+        <div class="tier-card">
+          <h4>Supporting Partner</h4>
+          <p class="tier-price">&yen;250,000 <span style="font-size: 0.75rem; font-weight: 500; color: var(--text-muted);">(税別)</span></p>
+          <p class="tier-desc" style="font-size: 0.95rem; font-weight: 500;">Join the partner network behind Japan&rsquo;s global pitch movement</p>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">Your organization&rsquo;s name sits alongside Japan&rsquo;s leading startup support institutions &mdash; a visible signal that you invest in founder success beyond borders.</p>
+          <ul class="tier-features">
+            <li>Logo in the Supporting Partners section of the landing page</li>
+            <li>Acknowledgment inside the ebook &mdash; seen by every download</li>
+            <li>Mention at all 10 masterclass sessions across Japan</li>
+            <li>Association with a methodology trusted by 600+ startups across Asia</li>
+            <li>Access to post-event session summaries</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 56px; text-align: center;">
+        <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: var(--text);">Ready to be the organization that equipped Japanese founders for the global stage?</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 28px;">日本のスタートアップの海外展開を支援するパートナーとして、ともに歩みませんか。</p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="mailto:sofian@depitch.academy?subject=Title%20Partnership%20Inquiry%20%E2%80%94%20Global%20Pitch%20Guide%20Japan" class="btn btn-primary" style="font-size: 1rem; padding: 16px 36px;">
+            Inquire about Title Partnership &rarr;
+          </a>
+          <a href="mailto:sofian@depitch.academy?subject=Supporting%20Partnership%20Inquiry%20%E2%80%94%20Global%20Pitch%20Guide%20Japan" class="btn btn-outline" style="font-size: 1rem; padding: 16px 36px;">
+            Inquire about Supporting Partnership &rarr;
+          </a>
+        </div>
+        <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.82rem;">Currently in discussion with startup support organizations across Tokyo, Osaka, and Fukuoka.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-brand">Global Pitch <span>Deck</span> Guide &mdash; Japan Edition</p>
+    <p>&copy; 2026 &bull; All rights reserved &bull; Made in Tokyo / 東京発</p>
+    <p style="margin-top: 8px;"><a href="mailto:sofian@depitch.academy">sofian@depitch.academy</a></p>
+  </footer>
+
+</body>
+</html>
