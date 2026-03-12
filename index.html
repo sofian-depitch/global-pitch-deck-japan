@@ -461,6 +461,75 @@
       text-transform: none;
       letter-spacing: 0;
     }
+    /* Lead Partner featured slot */
+    .lead-partner-slot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-direction: column;
+      width: 340px;
+      height: 140px;
+      margin: 0 auto 16px;
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      background: rgba(0,180,160,0.05);
+      box-shadow: 0 0 24px rgba(0,180,160,0.12);
+      transition: all 0.3s;
+      cursor: pointer;
+      text-decoration: none;
+      position: relative;
+    }
+    .lead-partner-slot:hover {
+      border-color: var(--teal-light);
+      background: rgba(0,180,160,0.09);
+      box-shadow: 0 0 36px rgba(0,180,160,0.2);
+      transform: translateY(-2px);
+    }
+    .lead-partner-slot .lp-badge {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      background: var(--teal);
+      padding: 3px 12px;
+      border-radius: 20px;
+    }
+    .lead-partner-slot .lp-logo-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .lead-partner-slot .lp-cta {
+      font-size: 0.7rem;
+      color: var(--teal);
+      font-weight: 500;
+    }
+    .lead-partner-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 24px auto;
+      max-width: 400px;
+    }
+    .lead-partner-divider::before,
+    .lead-partner-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border-light);
+    }
+    .lead-partner-divider span {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
 
     /* --- EXECUTIVE SUMMARY --- */
     .exec-summary-content {
@@ -1012,15 +1081,14 @@
       background-repeat: no-repeat;
     }
 
-    /* --- HIGHLIGHT STRIP --- */
-    .highlight-strip {
+    /* --- TESTIMONIALS MARQUEE --- */
+    .testimonials-strip {
       background: linear-gradient(135deg, #0a2520, #0d3d34);
-      padding: 48px 24px;
-      text-align: center;
+      padding: 48px 0;
       position: relative;
       overflow: hidden;
     }
-    .highlight-strip::before {
+    .testimonials-strip::before {
       content: '';
       position: absolute;
       top: -50%;
@@ -1030,28 +1098,75 @@
       background: radial-gradient(ellipse, rgba(0,180,160,0.08) 0%, transparent 60%);
       pointer-events: none;
     }
-    .highlight-strip .strip-content {
-      max-width: 800px;
-      margin: 0 auto;
+    .testimonials-strip .strip-header {
+      text-align: center;
+      margin-bottom: 32px;
       position: relative;
       z-index: 1;
     }
-    .highlight-strip blockquote {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #fff;
-      line-height: 1.5;
-      margin-bottom: 12px;
-      letter-spacing: -0.3px;
-    }
-    .highlight-strip blockquote em {
-      font-style: normal;
-      color: var(--teal-light);
-    }
-    .highlight-strip cite {
-      font-style: normal;
-      font-size: 0.85rem;
+    .testimonials-strip .strip-header h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
       color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .testimonial-marquee-wrap {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    }
+    .testimonial-track {
+      display: flex;
+      gap: 24px;
+      width: max-content;
+      animation: testimonial-scroll 40s linear infinite;
+    }
+    .testimonial-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes testimonial-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .testimonial-card {
+      flex-shrink: 0;
+      width: 340px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      position: relative;
+    }
+    .testimonial-card blockquote {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .testimonial-card blockquote::before {
+      content: '\201C';
+      font-size: 2rem;
+      color: var(--teal);
+      line-height: 0;
+      vertical-align: -0.3em;
+      margin-right: 4px;
+      font-style: normal;
+    }
+    .testimonial-card .tc-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .testimonial-card .tc-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .testimonial-card .tc-role {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
     }
 
     /* --- DARK SECTION (lessons) --- */
@@ -1124,7 +1239,7 @@
 
     @media (max-width: 768px) {
       .audience-grid-alt { grid-template-columns: 1fr; }
-      .highlight-strip blockquote { font-size: 1.1rem; }
+      .testimonial-card blockquote { font-size: 0.88rem; }
     }
 
     /* --- FOOTER --- */
@@ -1279,6 +1394,18 @@
       <p class="section-label" data-i18n="sponsors.label">Open Partner Slots</p>
       <h2 class="section-title" style="margin-left:auto;margin-right:auto;" data-i18n="sponsors.title">Join the partner network</h2>
       <p class="jp-text" style="text-align:center;">協賛パートナー</p>
+
+      <!-- Lead Partner featured slot -->
+      <a href="#sponsor" class="lead-partner-slot" style="text-decoration:none;">
+        <span class="lp-badge" data-i18n="sponsors.leadBadge">Lead Partner</span>
+        <span class="lp-logo-text" data-i18n="sponsors.leadLogo">Your Organization Here</span>
+        <span class="lp-cta" data-i18n="sponsors.leadCta">Become the Lead Partner &rarr;</span>
+      </a>
+
+      <div class="lead-partner-divider">
+        <span data-i18n="sponsors.divider">Supporting Partners</span>
+      </div>
+
       <div class="sponsor-row">
         <a href="#sponsor" class="sponsor-placeholder" style="text-decoration:none;">
           <span data-i18n="sponsors.logo">Your Logo Here</span>
@@ -1393,14 +1520,6 @@
       </div>
     </div>
   </section>
-
-  <!-- HIGHLIGHT STRIP -->
-  <div class="highlight-strip">
-    <div class="strip-content">
-      <blockquote data-i18n="quote.text">&ldquo;If you can&rsquo;t pitch it in 30 seconds, you can&rsquo;t pitch it in 30 minutes.&rdquo;<br>The difference between a good startup and a <em>funded</em> startup is the pitch.</blockquote>
-      <cite data-i18n="quote.cite">&mdash; Sofian Meguellati, Pitch Coach</cite>
-    </div>
-  </div>
 
   <!-- KEY LESSONS -->
   <section id="lessons" class="section-dark">
@@ -1601,6 +1720,101 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS MARQUEE -->
+  <div class="testimonials-strip">
+    <div class="strip-header">
+      <h3 data-i18n="testimonials.heading">What Founders Say</h3>
+    </div>
+    <div class="testimonial-track">
+      <!-- First set -->
+      <div class="testimonial-card">
+        <blockquote data-i18n="testimonial.1.quote">&ldquo;Expect one of the best coaching webinar in building the most convincing pitch decks.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name" data-i18n="testimonial.1.name">Eun Shin</span>
+          <span class="tc-role" data-i18n="testimonial.1.role">CEO, Voinosis</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote data-i18n="testimonial.2.quote">&ldquo;The coaching is practical, insightful, and really helps transform a pitch. I felt more confident presenting to investors.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name" data-i18n="testimonial.2.name">Jeong-Im</span>
+          <span class="tc-role" data-i18n="testimonial.2.role">CEO, ATEMs</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote data-i18n="testimonial.3.quote">&ldquo;The coaching helped me understand that improvement comes not from adding more, but from &lsquo;subtracting&rsquo; and refining.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name" data-i18n="testimonial.3.name">Yeong-Chan Ahn</span>
+          <span class="tc-role" data-i18n="testimonial.3.role">Director, SML Biopharm</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote data-i18n="testimonial.4.quote">&ldquo;Recommendable and efficient way to make immediate impact to improve pitching.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name" data-i18n="testimonial.4.name">Jason Bae</span>
+          <span class="tc-role" data-i18n="testimonial.4.role">CEO, GeneMedicine</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote data-i18n="testimonial.5.quote">&ldquo;Sofian provided invaluable insights on how to approach the European market.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name" data-i18n="testimonial.5.name">Chiwon Yi</span>
+          <span class="tc-role" data-i18n="testimonial.5.role">CEO, Bottless</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote data-i18n="testimonial.6.quote">&ldquo;That 1-hour session was priceless and really helped us build our global strategy.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name" data-i18n="testimonial.6.name">Ellie Lee</span>
+          <span class="tc-role" data-i18n="testimonial.6.role">CMO, apoc</span>
+        </div>
+      </div>
+      <!-- Duplicate set for seamless loop -->
+      <div class="testimonial-card">
+        <blockquote>&ldquo;Expect one of the best coaching webinar in building the most convincing pitch decks.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name">Eun Shin</span>
+          <span class="tc-role">CEO, Voinosis</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>&ldquo;The coaching is practical, insightful, and really helps transform a pitch. I felt more confident presenting to investors.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name">Jeong-Im</span>
+          <span class="tc-role">CEO, ATEMs</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>&ldquo;The coaching helped me understand that improvement comes not from adding more, but from &lsquo;subtracting&rsquo; and refining.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name">Yeong-Chan Ahn</span>
+          <span class="tc-role">Director, SML Biopharm</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>&ldquo;Recommendable and efficient way to make immediate impact to improve pitching.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name">Jason Bae</span>
+          <span class="tc-role">CEO, GeneMedicine</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>&ldquo;Sofian provided invaluable insights on how to approach the European market.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name">Chiwon Yi</span>
+          <span class="tc-role">CEO, Bottless</span>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>&ldquo;That 1-hour session was priceless and really helped us build our global strategy.&rdquo;</blockquote>
+        <div class="tc-author">
+          <span class="tc-name">Ellie Lee</span>
+          <span class="tc-role">CMO, apoc</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- AUTHOR -->
   <section class="author-section" id="author">
     <div class="container">
@@ -1683,7 +1897,7 @@
   <footer>
     <p class="footer-brand" data-i18n="footer.brand">Global Pitch <span>Deck</span> Guide &mdash; Japan Edition</p>
     <p data-i18n="footer.copy">&copy; 2026 &bull; All rights reserved &bull; Made in Tokyo / 東京発</p>
-    <p style="margin-top: 8px;"><a href="mailto:sofian@depitch.academy">sofian@depitch.academy</a></p>
+    <!-- email hidden -->
   </footer>
 
   <script>
@@ -1720,6 +1934,10 @@
       // Sponsors
       'sponsors.label': '協賛パートナー',
       'sponsors.title': 'パートナーネットワークに参加する',
+      'sponsors.leadBadge': '主要パートナー',
+      'sponsors.leadLogo': '貴組織名をここに',
+      'sponsors.leadCta': '主要パートナーになる &rarr;',
+      'sponsors.divider': 'サポーティングパートナー',
       'sponsors.logo': '貴組織のロゴ',
       'sponsors.cta': 'パートナーになる &rarr;',
 
@@ -1753,9 +1971,8 @@
       'contents.ch6Title': '成功のためのアドバイス',
       'contents.ch6Desc': 'マルチバースピッチ準備法（5秒・30秒・5分版）、「驚き」の演出、最適なスピーカーの選び方、成功のための6つの必須ルールを紹介します。',
 
-      // Quote
-      'quote.text': '「30秒でピッチできなければ、30分でもピッチできない。」<br>良いスタートアップと<em>資金調達に成功する</em>スタートアップの違いは、ピッチにあります。',
-      'quote.cite': '&mdash; Sofian Meguellati（ソフィアン・メゲラティ）、ピッチコーチ',
+      // Testimonials
+      'testimonials.heading': '起業家の声',
 
       // Key Lessons
       'lessons.label': '重要な学び',
